@@ -1,0 +1,85 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000; /* Ubah warna latar belakang menjadi hitam */
+}
+
+.container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 50px; /* Jarak antara bola */
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  animation: bounce 2s ease-in-out infinite alternate;
+}
+
+.red {
+  background-color: #ff5733;
+  left: 5%;
+}
+
+.blue {
+  background-color: #3366ff;
+  left: 20%;
+}
+
+.green {
+  background-color: #33ff77;
+  left: 35%;
+}
+
+.yellow {
+  background-color: #ffea33;
+  left: 50%;
+}
+
+.purple {
+  background-color: #aa33ff;
+  left: 65%;
+}
+
+.purple .ball {
+  background-color: #aa33ff;
+}
+
+.purple .shadow {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.orange {
+  background-color: #ff5733;
+  left: 80%;
+}
+
+.shadow {
+  width: 50px; /* Ukuran bayangan sama dengan ukuran bola */
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px; /* Bayangan diletakkan di bawah bola */
+  left: 0;
+  animation: bounce 2s ease-in-out infinite alternate; /* Bayangan juga ikut bergerak */
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-150px);
+  }
+}
